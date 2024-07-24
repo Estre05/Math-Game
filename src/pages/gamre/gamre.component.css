@@ -1,0 +1,211 @@
+body {
+    margin: 0.1px;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffcccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+app-comp1 {
+    display: block; /* Asegura que el componente se comporte como un bloque */
+    margin-bottom: 60px; /* Espacio entre el componente y el título */
+    -webkit-animation: vibrate-1 0.5s linear infinite both;
+            animation: vibrate-1 0.5s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+    }
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+    }
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+    }
+    60% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+    }
+    80% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+    }
+    100% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+    }
+}
+
+@keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+    }
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+    }
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+    }
+    60% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+    }
+    80% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+    }
+    100% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+    }
+}
+
+header h1 {
+    font-size: 2.2em;
+    color: #000;
+    margin: 0px 0;
+    margin-right: 170px;
+}
+
+.exercise {
+    margin: 20px 0;
+}
+
+.operation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5em;
+    margin-top: 100px;
+}
+
+.number {
+    color: #556b2f;
+    margin-top: -50px;
+}
+
+.operator {
+    color: #ff6347;
+    margin-right: 180px;
+    margin-bottom: 10px;
+}
+
+.result {
+    margin: 80px 0;
+    font-size: 4em;
+}
+
+.question {
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.line {
+    width: 260px;
+    height: 5px;
+    background-color: #ff6347;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.option-input {
+    display: none;
+}
+
+.option {
+    background-color: #ffe4c4;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 2em;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-input:checked + .option {
+    background-color: #eb6f68; /* Highlight color for selected options */
+}
+
+.option.incorrect:hover {
+    transform: scale(1.1);
+    -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-horizontal {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake-horizontal {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+.option-input:checked + .correct {
+    background-color: #5273f7; 
+    color: #fff;
+}
+
+.tracking-in-expand {
+    animation: tracking-in-expand 0.4s linear both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.2em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
