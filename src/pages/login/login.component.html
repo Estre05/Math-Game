@@ -1,1 +1,19 @@
-<p>login works!</p>
+<body>
+    <div class="login-container">
+        <app-comp1></app-comp1>
+        <h2>Inicio de sesión</h2>
+        <p>¿No tienes cuenta? <a href="#">Regístrate gratis</a></p>
+        <div class="input-container">
+            <label for="username">USERNAME</label>
+            <input type="text" id="username" class="blur-in-expand" placeholder="xxxxxxxx">
+        </div>
+        <div class="input-container">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" class="blur-in-expand" placeholder="xxxxxxxx">
+        </div>
+        <button class="shake-left-right" (click)="onLogin()">
+            <span>LOGIN</span>
+        </button>
+        <p><a href="#">¿Olvidaste la contraseña?</a></p>
+    </div>
+</body>
